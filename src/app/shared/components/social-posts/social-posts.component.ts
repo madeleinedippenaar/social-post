@@ -12,6 +12,8 @@ export class SocialPostsComponent implements OnInit {
     {title: 'test', thoughts: 'test'}
   ];
 
+  showPostForm: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
