@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Post } from '../../models/social';
 
 @Component({
@@ -8,11 +8,16 @@ import { Post } from '../../models/social';
 })
 export class PostFormComponent implements OnInit {
 
-  post: Post = {title: '', thoughts: ''};
+  post: Post ={title: '', thoughts: ''}
+  @Output() submitted = new EventEmitter<Post>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submitPost() {
+    this.submitted.emit(this.post);
   }
 
 }

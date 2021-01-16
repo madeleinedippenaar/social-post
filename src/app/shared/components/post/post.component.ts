@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from '../../models/social';
 
 @Component({
@@ -9,10 +9,15 @@ import { Post } from '../../models/social';
 export class PostComponent implements OnInit {
 
   @Input() post: Post = {title: '', thoughts: ''}
+  @Output() deleted = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete() {
+    this.deleted.emit();
   }
 
 }

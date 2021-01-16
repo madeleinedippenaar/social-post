@@ -9,7 +9,7 @@ import { Post } from '../../models/social';
 export class SocialPostsComponent implements OnInit {
 
   posts: Post[] = [
-    {title: 'test', thoughts: 'test'}
+    {title: "test", thoughts: "test thoughts"}
   ];
 
   showPostForm: boolean = false;
@@ -21,10 +21,11 @@ export class SocialPostsComponent implements OnInit {
 
   onSumbit(post: Post) {
     this.posts. push(post);
+    this.showPostForm = false;
   }
 
-  onDelete(post: Post) {
-
+  onDelete(i: number) {
+    this.posts.splice(i, 1);
   }
 
 }
