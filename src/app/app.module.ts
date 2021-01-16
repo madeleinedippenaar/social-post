@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SocialPostsComponent } from './shared/components/social-posts/social-posts.component';
 import { PostComponent } from './shared/components/post/post.component';
 import { PostFormComponent } from './shared/components/post-form/post-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostFormComponent } from './shared/components/post-form/post-form.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@ import { Post } from '../../models/social';
 })
 export class PostComponent implements OnInit {
 
-  @Input() post: Post = {title: '', thoughts: ''};
+  @Input() post: Post = {title: '', thoughts: ''}
 
   constructor() { }
 

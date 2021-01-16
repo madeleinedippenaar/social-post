@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../../models/social';
 
 @Component({
   selector: 'app-post-form',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
+
+  post: Post = {title: '', thoughts: ''};
 
   constructor() { }
 
