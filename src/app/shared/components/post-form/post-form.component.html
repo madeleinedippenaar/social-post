@@ -1,5 +1,7 @@
-<div>
-    <input [(ngModel)]="post.title" />
-    <input [(ngModel)]="post.thoughts" />
-    <button (click)="submitPost()">Submit</button>
+<div class="wrapper-form"> 
+    <label for="title">Title</label>
+    <input name="title" id="title" [(ngModel)]="post.title" />
+    <label for="thought">Thought</label>
+    <textarea name="thought" id="thought" cols="35" rows="15" [(ngModel)]="post.thoughts"></textarea>
+    <button (click)="submitPost()">Add Post</button>
 </div>
